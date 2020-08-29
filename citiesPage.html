@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Miestai</title>
+</head>
+<body id="cities-body" onload="initiate()">
+    <header>
+        <img id="logo" src="Teltonika.png" alt="Teltonika logo">
+    </header>
+    <main>
+        <div class="top">
+        <span id="cities-header"></span>
+        <button class= "add" id="add-btn" onclick="addCityForm()">+</button>
+        </div>
+        <div class="searchBar">
+        <input type="text" name="searchBar" id="searchBar" onkeyup="FilterBySearch()" placeholder="Paieška"/>
+        <img id="search-logo" src="search.png" alt="searchBar"/>
+        </div>
+        <div class="select-data">
+            <input type="date" onchange="filterForm()"  id="filter-data"> 
+        </input>
+          </div>
+    <div class="cities-list" id="cities">
+        <span id="sort" onClick="sortData()">&and;</span>
+        <table class="cities-table" id="allcities">
+            <!-- <img id="remove-icon" src="trash.png" alt="trash" />
+            <img id="edit-icon" src="Vector.png" alt="edit" /> -->
+            <thead>
+                <tr>
+                    <th id="name">PAVADINIMAS</th>
+                    <th id="area">UŽIMAMAS PLOTAS</th>
+                    <th id="pop">GYVENTOJŲ SKAIČIUS</th>
+                    <th id="code">MIESTO PAŠTO KODAS</th>
+                    <th colspan="2" id="actions">VEIKSMAI</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <div id="pagination-wrapper"></div>
+    </div> 
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-cont">
+        </div>
+      
+      </div> 
+    </main>    
+    <script src="cities.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
