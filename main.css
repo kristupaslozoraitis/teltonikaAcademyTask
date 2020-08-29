@@ -89,7 +89,7 @@ header {
 #pagination-wrapper {
   position: relative;
   left: 900px;
-  top: 250px;
+  top: 260px;
 }
 table {
   border: 0.5px solid #969696;
@@ -228,4 +228,12 @@ a {
   left: 35px;
   display: none;
   color: red;
+}
+#page-button{
+border-style: none;
+background-color: white;
+    cursor: pointer
+}
+#page-button.active{
+  background-color:lightgrey;
 }
