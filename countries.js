@@ -320,6 +320,7 @@ function PaginationButton(page, items) {
   button.innerText = page;
   button.setAttribute("value", page);
   button.setAttribute("id", "page-button");
+  if (current_page == page) button.classList.add("active");
   button.addEventListener("click", async function () {
     current_page = button.innerText;
     items = await GetCountries(current_page);
